@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : Oil Painting 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20120825
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Mytweetes</title>
+<link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Coda:400,800" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="menu-wrapper">
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="page">Homepage</a></li>
+			<li><a href="tweet">Tweets</a></li>
+			<li><a href="follower">Follower</a></li>
+			<li><a href="following">Following</a></li>
+			<li><a href="contact">Contact</a></li>
+      <h2>  <% if current_user %> 
+ <li><a> Welcome <%= current_user.name %>!</a></li>
+  <%= link_to "Sign Out", signout_path %>
+<% else %>
+  <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+<% end %>
+		</ul>
+	</div>
+	<!-- end #menu --> 
+</div>
+<div id="header-wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><center><a href="#">My Tweety</center></a></h1>
+			<p><center>Twitter is an online social networking service and microblogging service that enables its users to send and read text-based messages</center></p>
+		</div>
+	</div>
+</div>
+<!-- end #header -->
+<div id="banner"></div>
+<div id="wrapper">
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<div class="post">
+						<h2 class="title"><a href="#"></a></h2>		<center><div class="img_i"><%=image_tag("/assets/bird.jpeg")%></div></center>
+						<p class="meta"><span class="date"></span><span class="posted"><a href="#"></a></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+											
+							<p class="links"><a href="#"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#"></a></p>
+						</div>
+					</div>
+				</div>
+				<!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>Categories</h2>
+							<ul>
+								<li><a href="tweet">Tweet</a></li>
+								<li><a href="follower">Follower</a></li>
+								<li><a href="following">Following</a></li>
+								<li><a href="contact">Contact</a></li>
+								</ul>
+						</li>
+										</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page --> 
+</div>
+<div id="footer">
+	<p>Copyright (c) 2012 apisolutions.com. All rights reserved.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
